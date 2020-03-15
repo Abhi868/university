@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>My School </title>{% endblock %}
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+
+<table class="table table-bordered"><h2>ClassRoom Details</h2></table>
+
+
+
+
+
+ <table class="table table-stripedtable">
+    <thead>
+      <tr>
+        <th>ClassRoom</th>
+        <th>Capacity</th>
+        <th>Shape</th>
+        <th>Web Support</th>
+        <th>Subjects</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in data %}
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.seating_capacity}}</td>
+            <td>{{data.shape}}</td>
+            <td>{{data.web_support}}</td>
+            <td>{{data.subject}}</td>
+        </tr>
+       
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+  <!-- {% for data in data %}
+  <thead>
+  <tr>
+      <th>ClassRoom</th>
+      <th>Capacity</th>
+      <th>Shape</th>
+      <th>Web Support</th>
+      <th>Subject</th>
+  </tr>
+ 
+  </thead>
+     <tbody>
+        <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.seating_capacity}}</td>
+        <td>{{td.shape}}</td>
+        <td>{{data.web_support}}</td>
+        <td>{{data.subject}}</td>
+        </tr>
+    </tbody>
+
+  {% endfor %} -->
+</body>
+</html>
